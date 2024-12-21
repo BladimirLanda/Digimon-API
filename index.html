@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/webp" href="img/favicon.webp">
+    <title>Digimon - API</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__banner">
+            <h1 class="banner__title">Digimon Adventure</h1>
+            <img src="img/logo__digimon.png" alt="digimon-logo" class="banner__img">
+        </div>
+
+        <div class="header__form">
+            <form class="form">
+                <div>
+                    <label for="nombre" class="form__label">Digimon</label>
+                    <select name="nombre" id="nombre" class="form__select">
+                        <option value="" disabled selected>-------Digimon-------</option>
+                        <!--Respuesta JS (Digimons)-->
+                    </select>
+                </div>
+
+                <div>
+                    <label for="level" class="form__label">Nivel</label>
+                    <select name="level" id="level" class="form__select">
+                        <option value="" disabled selected>-------Level-------</option>
+                        <!--Respuesta JS (Niveles)-->
+                    </select>
+                </div>
+
+                <div>
+                    <input type="submit" value="Buscar" class="form__btn">
+                    <input type="reset" value="Restaurar" class="form__btn">
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__items">
+            <!--Respuesta JS-->
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
