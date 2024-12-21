@@ -33,6 +33,11 @@ body {
   font-weight: 600;
   color: rgb(255, 149, 0);
 }
+@media screen and (max-width: 700px) {
+  .header .banner__title {
+    font-size: 35px;
+  }
+}
 .header .banner__img {
   width: 150px;
 }
@@ -98,7 +103,7 @@ body {
   width: 80%;
   padding: 10px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   gap: 20px;
 }
 .main__items .digimon-card {
@@ -111,9 +116,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.main__items .digimon-card:hover {
-  box-shadow: 3px 3px 10px 0px rgb(255, 149, 0);
 }
 .main__items .digimon-card .name-info {
   font-weight: 600;
@@ -148,5 +150,8 @@ body {
 @media (hover: hover) {
   .form__btn:hover {
     background-color: rgb(63, 63, 63);
+  }
+  .digimon-card:hover {
+    box-shadow: 3px 3px 10px 0px rgb(255, 149, 0);
   }
 }/*# sourceMappingURL=styles.css.map */

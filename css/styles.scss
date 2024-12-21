@@ -41,6 +41,10 @@ body {
             font-weight: 600;
 
             color: rgb(255, 149, 0);
+
+            @include phones() {
+                font-size: 35px;
+            }
         }
 
         &__img {
@@ -121,7 +125,7 @@ body {
     padding: 10px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     gap: 20px;
 
 
@@ -137,10 +141,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        &:hover {
-            box-shadow: 3px 3px 10px 0px rgb(255, 149, 0);
-        }
 
         .name-info {
             font-weight: 600;
@@ -179,9 +179,14 @@ body {
     border-radius: 5px;
 }
 
+
 @media(hover: hover) {
     .form__btn:hover {
         background-color: rgb(63, 63, 63);
+    }
+
+    .digimon-card:hover {
+        box-shadow: 3px 3px 10px 0px rgb(255, 149, 0);
     }
 }
 
