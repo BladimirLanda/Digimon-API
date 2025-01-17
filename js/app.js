@@ -2,9 +2,9 @@
 
 //Selección HTML
 const formDgm = document.querySelector('.form');
-const container = document.querySelector('.main__items');
 const nameDgm = document.querySelector('#nombre');
 const levelDgm = document.querySelector('#level');
+const container = document.querySelector('.main__items');
 
 //Eventos
 window.addEventListener('load', () => {
@@ -51,7 +51,7 @@ const createCard = (datos) => {
         const cardImg = document.createElement('img');
         cardImg.classList.add('digimon-img');
         cardImg.src = digimon.img;
-        cardImg.alt = `imagen ${digimon.name}`;
+        cardImg.alt = `imagen-${digimon.name}`;
 
         cardInfo.appendChild(nameInfo);
         cardInfo.appendChild(levelInfo);
@@ -97,10 +97,14 @@ const createSelectLevel = (datos) => {
 const seleccion = () => {
     if(nameDgm.value) {
         levelDgm.disabled = true;
+    } else {
+        levelDgm.disabled = false;
     }
 
     if(levelDgm.value) {
         nameDgm.disabled = true;
+    } else {
+        nameDgm.disabled = false;
     }
 }
 
@@ -159,13 +163,6 @@ const resetApi = (e) => {
 }
 
 //--//
-const limpiarHTML = (element) => {
-    while(element.firstChild) {
-        element.removeChild(element.firstChild);
-    }
-}
-
-//--//
 const alerta = (msg) => {
     const msgAlerta = document.querySelector('.alert');
 
@@ -180,4 +177,11 @@ const alerta = (msg) => {
     setTimeout(() => {
         parrafo.remove();
     }, 2000);
+}
+
+//--//
+const limpiarHTML = (element) => {
+    while(element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
 }
